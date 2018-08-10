@@ -1,0 +1,19 @@
+.main-header {
+  color: orange;
+  text-align: center;
+}
+
+.entry-box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+.box1 {
+  left: 400px;
+}
+
+.box2 {
+  top: 100px;
+}

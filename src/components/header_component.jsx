@@ -3,7 +3,7 @@ import React from 'react';
 const Header = function(props) {
   return(
     <div>
-      This is the header!
+      <h1 className='main-header'>Figure out what makes Adam laugh!!</h1>
     </div>
   );
 };
