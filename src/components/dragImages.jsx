@@ -6,10 +6,10 @@ export default class DragImages extends Component {
     this.farts = "farts";
 
     this.dragChangePosition = this.dragChangePosition.bind(this);
-    // const dragElement = document.getElementById("draggable");
   }
 
   dragChangePosition(e) {
+    const dragElement = document.getElementById("draggable");
 
     console.log(e.clientX);
 
@@ -20,7 +20,7 @@ export default class DragImages extends Component {
 
   render() {
     return(
-      <div id="draggable" onClick={ (e) => this.dragChangePosition(e) }>
+      <div id="draggable" draggable="true" onDrag={ (e) => this.dragChangePosition(e) }>
         Image
       </div>
     );
