@@ -17,17 +17,25 @@ class SelectedBox extends Component {
   render() {
     return(
       <div>
-        { this.props.SelectedBox.test }
+        { this.props.boxSize }
       </div>
     );
   }
 }
 
 
-function mapStateToProps(state) {
-  return({
-    SelectedBox: state.SelectedBox
-  });
+function mapStateToProps(state, ownProps) {
+  if(ownProps.boxNum === "box1") {
+    return({
+      boxPic: state.SelectedBox.boxPic1,
+      boxSize: state.SelectedBox.boxSize1
+    });
+  } else if(ownProps.boxNum === "box2") {
+    return({
+      boxPic: state.SelectedBox.boxPic2,
+      boxSize: state.SelectedBox.boxSize2
+    });
+  }
 }
 
 
