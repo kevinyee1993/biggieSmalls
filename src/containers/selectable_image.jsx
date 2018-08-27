@@ -8,17 +8,12 @@ class SelectableImage extends Component {
 
   constructor(props) {
     super(props);
-    // this.selectImage = this.selectImage.bind(this);
   }
 
-  // selectImage() {
-  //   console.log(this.props.size);
-  // }
-
-
   render() {
+    let image = { imageURL: this.props.imageURL, imageSize: this.props.size };
     return(
-      <div className='selectable-image' onClick={ () => this.props.selectImage(this.props.size) }>
+      <div className='selectable-image' onClick={ () => this.props.selectImage(image) }>
         <img src={ this.props.imageURL } ></img>
       </div>
     );
