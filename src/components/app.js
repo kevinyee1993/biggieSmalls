@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 // components
 import Header from './header_component';
-import SelectableImage from './selectable_image';
+import SelectableImage from '../containers/selectable_image';
 
 // containers
 import SelectedBox from '../containers/selected_box';

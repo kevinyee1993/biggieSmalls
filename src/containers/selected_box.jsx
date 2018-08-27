@@ -25,7 +25,6 @@ class SelectedBox extends Component {
 
 
 function mapStateToProps(state) {
-  console.log(state);
   return({
     SelectedBox: state.SelectedBox
   });

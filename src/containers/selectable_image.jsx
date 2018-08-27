@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class SelectableImage extends Component {
+import { bindActionCreators } from 'redux';
+import { selectImage } from '../actions';
+
+class SelectableImage extends Component {
 
   constructor(props) {
     super(props);
@@ -20,3 +24,9 @@ export default class SelectableImage extends Component {
     );
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ selectImage: selectImage }, dispatch);
+}
+
+export default connect(null, mapDispatchToProps)(SelectableImage);
