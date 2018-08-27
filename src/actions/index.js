@@ -5,6 +5,8 @@ export const SELECT_IMAGE = 'SELECT_IMAGE';
 // some data?
 // looks like it can just be data then you do what you want with it homie
 export function selectImage(imageSize) {
+  console.log("action dispatched!");
+  
   return({
     type: SELECT_IMAGE,
     payload: imageSize
