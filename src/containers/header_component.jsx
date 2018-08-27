@@ -9,19 +9,28 @@ import { resetSelection } from '../actions/index';
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.sizeChecker = this.sizeChecker.bind(this);
   }
 
-  sizeChecker() {
+  correctSizes() {
     return ((this.props.boxSize1 === 'big' && this.props.boxSize2 === 'small') ||
   (this.props.boxSize1 === 'small' && this.props.boxSize2 === 'big'));
   }
 
+  wrongSizes() {
+    return(this.props.boxSize1 && this.props.boxSize2 && this.props.boxSize1 === this.props.boxSize2)
+  }
+
   render() {
-    if(this.sizeChecker()) {
+    if(this.correctSizes()) {
       return(
         <div onClick={ this.props.resetSelection }>
           <h1 className='main-header'>HAHAHA!</h1>
+        </div>
+      );
+    } else if(this.wrongSizes()) {
+      return(
+        <div onClick={ this.props.resetSelection }>
+          <h1 className='main-header'>This is not funny.</h1>
         </div>
       );
     }
