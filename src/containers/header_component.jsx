@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 // create new action creator which can reset the state of the
 // selected box reducer
+import { resetSelection } from '../actions/index';
 
 class Header extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class Header extends Component {
   render() {
     if(this.sizeChecker()) {
       return(
-        <div>
+        <div onClick={ this.props.resetSelection }>
           <h1 className='main-header'>HAHAHA!</h1>
         </div>
       );
@@ -41,4 +42,8 @@ function mapStateToProps(state) {
   });
 }
 
-export default connect(mapStateToProps)(Header);
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ resetSelection: resetSelection }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

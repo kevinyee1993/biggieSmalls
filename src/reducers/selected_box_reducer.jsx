@@ -1,4 +1,4 @@
-import { SELECT_IMAGE } from '../actions/index';
+import { SELECT_IMAGE, RESET_GAME } from '../actions/index';
 
 
 // just setting the default selected pictures;
@@ -21,6 +21,9 @@ export default function(state = defaultState, action) {
         return Object.assign({}, state, { boxPic2: action.payload.imageURL,
           boxSize2: action.payload.imageSize });
       }
+      break;
+    case RESET_GAME:
+      return action.payload;
 
       // think about returning default state here or something to restart
       // everything after both boxes are filled
