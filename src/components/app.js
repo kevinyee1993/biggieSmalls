@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 // components
-import Header from './header_component';
-import SelectableImage from '../containers/selectable_image';
 
 // containers
+import Header from '../containers/header_component';
+import SelectableImage from '../containers/selectable_image';
 import SelectedBox from '../containers/selected_box';
 
 export default class App extends Component {
