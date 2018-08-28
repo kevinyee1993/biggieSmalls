@@ -19,7 +19,8 @@ export function resetSelection() {
       payload: { boxPic1: null,
         boxPic2: null,
         boxSize1: null,
-        boxSize2: null }
+        boxSize2: null,
+        imageSelected: null}
     }
   );
 }

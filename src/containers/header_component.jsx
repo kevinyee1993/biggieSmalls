@@ -17,27 +17,27 @@ class Header extends Component {
   }
 
   wrongSizes() {
-    return(this.props.boxSize1 && this.props.boxSize2 && this.props.boxSize1 === this.props.boxSize2)
+    return(this.props.boxSize1 && this.props.boxSize2 && this.props.boxSize1 === this.props.boxSize2);
   }
 
   render() {
     if(this.correctSizes()) {
       return(
         <div onClick={ this.props.resetSelection }>
-          <h1 className='main-header'>HAHAHA!</h1>
+          <h1 className='main-header'>HAHAHA! Click on me to restart</h1>
         </div>
       );
     } else if(this.wrongSizes()) {
       return(
         <div onClick={ this.props.resetSelection }>
-          <h1 className='main-header'>This is not funny.</h1>
+          <h1 className='main-header'>This is not funny. Click on me to restart.</h1>
         </div>
       );
     }
     else {
       return(
         <div>
-          <h1 className='main-header'>HEADER</h1>
+          <h1 className='main-header'>Select two images</h1>
         </div>
       );
     }

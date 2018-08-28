@@ -13,17 +13,20 @@ class SelectedBox extends Component {
     super(props);
   }
 
-  willReceiveProps(nextProps) {
-
-  }
-
-
   render() {
-    return(
-      <div>
-        { this.props.boxSize }
-      </div>
-    );
+    if(this.props.boxPic) {
+      return(
+        <div className='selected-box'>
+          <img src={ this.props.boxPic }/>
+        </div>
+      );
+    } else {
+      return(
+        <div className='selected-box'>
+          <h1 className='direction-header'>Select an image</h1>
+        </div>
+      );
+    }
   }
 }
 

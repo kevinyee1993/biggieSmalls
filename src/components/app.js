@@ -14,6 +14,10 @@ export default class App extends Component {
     return (
       <div>
         <Header />
+        <div className='selected-box-pair'>
+          <SelectedBox boxNum="box1"/>
+          <SelectedBox boxNum="box2"/>
+        </div>
         <SelectableImage size={ BIG } imageURL="https://upload.wikimedia.org/wikipedia/commons/3/37/African_Bush_Elephant.jpg"/>
         <SelectableImage size={ SMALL } imageURL="http://woodstream.scene7.com/is/image/woodstream/hh-animals-mice-2?$ProductPgLarge2$"/>
         <SelectableImage size={ SMALL } imageURL="https://vignette.wikia.nocookie.net/hamtaro/images/1/1d/HamtaroN.png/revision/latest?cb=20150928215408"/>
