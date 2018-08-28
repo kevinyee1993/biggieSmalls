@@ -13,7 +13,9 @@ class SelectableImage extends Component {
   render() {
     let image = { imageURL: this.props.imageURL, imageSize: this.props.size };
     return(
-      <div className='selectable-image' onClick={ () => this.props.selectImage(image) }>
+      <div className='selectable-image' onClick={ () => {
+          this.props.selectImage(image);
+        } }>
         <img src={ this.props.imageURL } ></img>
       </div>
     );
